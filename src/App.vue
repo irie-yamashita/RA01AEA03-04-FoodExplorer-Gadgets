@@ -1,3 +1,8 @@
+<template>
+  <Header></Header>
+  <RouterView />
+</template>
+
 <script setup>
 import { RouterView } from 'vue-router';
 import Header from './components/Header.vue';
@@ -92,14 +97,56 @@ const receptes = ref([
 ]);
 
 
+const productes = ref([
+  {
+    id: 1,
+    nom: 'Iphone 7 (reacondicionat)"',
+    preu: 120
+  },
+  {
+    id: 2,
+    nom: 'Auriculars wireless',
+    preu: 60
+  },
+  {
+    id: 3,
+    nom: 'Rellotge intel·ligent',
+    preu: 40
+  },
+  {
+    id: 4,
+    nom: 'Altaveu wireless',
+    preu: 30
+  },
+  {
+    id: 5,
+    nom: 'Tauleta gràfica',
+    preu: 70
+  },
+  {
+    id: 6,
+    nom: 'Monitor 24"',
+    preu: 120
+  }
+]);
+
+const carret = ref([
+  {
+    id: 2,
+    nom: 'Auriculars wireless',
+    preu: 60
+  }
+]);
+
+provide('productes', productes);
+provide('carret', carret);
 provide('receptes', receptes)
+
+
+
 
 
 </script>
 
-<template>
-  <Header></Header>
-  <RouterView />
-</template>
 
 <style scoped></style>

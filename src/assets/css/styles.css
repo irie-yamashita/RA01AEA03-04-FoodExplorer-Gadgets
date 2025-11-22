@@ -5,10 +5,10 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-section, main {
+main {
     @apply bg-stone-900 text-white max-w-[1500px] py-[30px] px-[15px] mx-auto;
 }
 
 .btn {
-    @apply px-3 bg-[#ff8800] py-2 rounded-md hover:scale-105 transition-transform
+    @apply px-3 bg-[#ff8800] py-2 rounded-md hover:scale-105 transition-transform cursor-pointer
 }
