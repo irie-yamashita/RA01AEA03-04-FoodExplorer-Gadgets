@@ -20,23 +20,34 @@
 <template>
     <main v-if="recepta" class="flex justify-center gap-12 py-10 mt-8 px-5">
         <img class="w-[30%] object-cover rounded-md" :src="recepta.img" alt="foto recepta">
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-4  p-6 rounded-md">
             <header class="space-y-1">
-                <h1 :class="`text-3xl font-bold text-${recepta.color}-500`">{{recepta.nom}}</h1>
+                <h1 class="text-3xl font-bold text-[#ff8800]">{{recepta.nom}}</h1>
                 <p>{{ recepta.descripcio }}</p>
             </header>
             
             <div class="space-y-2">
-                <p class="font-bold">Ingredients:</p>
+                <p class="font-bold text-[#ff8800]">Ingredients:</p>
                 <ul class="list-disc ml-8">
                     <li v-for="(ingredient,i) in recepta.ingredients" :key="i">{{ ingredient }}</li>
                 </ul>
             </div>
             <div class="space-y-2">
-                <p class="font-bold">Pas a pas:</p>
+                <p class="font-bold text-[#ff8800]">Pas a pas:</p>
                 <ol class="list-decimal ml-8">
                     <li v-for="(pas,i) in recepta.passos" :key="i">{{ pas }}</li>
                 </ol>
+            </div>
+            <div class="flex gap-2 items-center">
+                <p class="font-bold text-[#ff8800]">Valoració:</p>
+                <p class="flex gap-1">
+                    <span v-for="i in recepta.puntuacio">
+                        <img src="../assets/images/estrella.svg" class="size-3" alt="estrella">
+                    </span>
+                    <span v-for="i in 5 - recepta.puntuacio">
+                        <img src="../assets/images/estrella-buida.svg" class="size-3" alt="estrella">
+                    </span>
+                </p>
             </div>
         </div>
 

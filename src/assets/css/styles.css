@@ -1,6 +1,14 @@
 @import "tailwindcss";
 
+:root {
+    @apply bg-stone-900 text-white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
 section, main {
-    @apply max-w-[1700px] mx-auto;
+    @apply bg-stone-900 text-white max-w-[1500px] py-[30px] mx-auto;
+}
+
+.btn {
+    @apply px-3 bg-[#ff8800] py-2 rounded-md hover:scale-105 transition-transform
 }
