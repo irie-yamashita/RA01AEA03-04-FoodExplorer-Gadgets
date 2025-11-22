@@ -1,9 +1,8 @@
 <script setup>
-  import { RouterView } from 'vue-router';
-  import Header from './components/Header.vue';
-  import { ref } from 'vue';
-  import { provide } from 'vue';
-
+import { RouterView } from 'vue-router';
+import Header from './components/Header.vue';
+import { ref } from 'vue';
+import { provide } from 'vue';
 
 const receptes = ref([
   {
@@ -18,7 +17,7 @@ const receptes = ref([
       'Cobreix amb formatge ratllat i enforna fins que quedi gratinat'
     ],
     img: 'https://www.tasteofhome.com/wp-content/uploads/2025/07/Best-Lasagna_EXPS_ATBBZ25_36333_DR_07_01_2b.jpg',
-    color:'amber'
+    color: 'amber'
   },
   {
     id: 2,
@@ -32,7 +31,7 @@ const receptes = ref([
       'Barreja-ho tot suaument per integrar els sabors'
     ],
     img: '',
-    color:''
+    color: ''
   },
   {
     id: 3,
@@ -45,19 +44,20 @@ const receptes = ref([
       'Aboca-hi el brou i deixa-ho bullir fins que tot sigui tou',
       'Tritura la barreja fins obtenir una textura fina i homogènia'
     ],
-      img: '',
-    color:''
+    img: '',
+    color: ''
   }
 ]);
 
 
 provide('receptes', receptes)
 
+
 </script>
 
 <template>
   <Header></Header>
-  <RouterView/>
+  <RouterView />
 </template>
 
 <style scoped></style>

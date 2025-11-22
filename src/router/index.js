@@ -32,8 +32,14 @@ const router = createRouter({
       path: "/no-trobat",
       name: "noTrobat",
       component: NoTrobat
+    },
+    { 
+      path: "/:pathMatch(.*)*",
+      name: "NoTrobat",
+      component: NoTrobat
     }
   ],
 })
+
 
 export default router

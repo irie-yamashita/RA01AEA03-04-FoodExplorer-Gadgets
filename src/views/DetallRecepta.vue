@@ -1,19 +1,24 @@
 <script setup>
     import { inject } from 'vue';
-    import { useRoute } from 'vue-router';
+    import { useRoute, useRouter } from 'vue-router';
 
-    
     const route = useRoute();
     const receptaId =  parseInt(route.params.id);
     
     const receptes = inject('receptes');
     const recepta = receptes.value.find(recepta => recepta.id === receptaId)
 
+    // si no troba recepta redirigeixo
+    if(!recepta) {
+        const router = useRouter();
+        router.push({name:'NoTrobat'})
+    }
+
 
 </script>
 
 <template>
-    <main class="flex justify-center gap-12 py-10 mt-8 px-5">
+    <main v-if="recepta" class="flex justify-center gap-12 py-10 mt-8 px-5">
         <img class="w-[30%] object-cover rounded-md" :src="recepta.img" alt="foto recepta">
         <div class="flex flex-col gap-4">
             <header class="space-y-1">
