@@ -11,8 +11,8 @@
     </div>
     <nav class="flex gap-3">
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="receptes">Receptes</RouterLink>
-        <RouterLink to="gadgets">Gadgets</RouterLink>
+        <RouterLink to="/receptes">Receptes</RouterLink>
+        <RouterLink to="/gadgets">Gadgets</RouterLink>
     </nav>
 </header>
 </template>
