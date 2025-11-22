@@ -1,19 +1,26 @@
 <script setup>
+import { defineEmits } from 'vue';
 
 const props = defineProps({
     producte: Object
 });
 
+const emit = defineEmits(['add-product'])
+
+const onAfegirProducte = () => {
+    emit('add-product', props.producte)
+}
+
 </script>
 
 <template>
     
-    <li class="flex justify-between">
-        <div class="flex gap-4">
+    <li class="flex justify-between py-2 px-4 bg-stone-800 border border-teal-950 items-center rounded-md">
+        <div class="flex gap-4 items-center">
             <h3>{{ props.producte.nom }}</h3>
-            <p>{{ props.producte.preu }}€</p>
+            <p class="text-teal-900 font-bold text-[18px]">{{ props.producte.preu }}€</p>
         </div>
-        <button class="btn w-fit bg-teal-900!">Afegir al carret</button>
+        <button @click="onAfegirProducte" class="btn w-fit bg-teal-900!">Afegir al carret</button>
     </li>
 
 </template>
