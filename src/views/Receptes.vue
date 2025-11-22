@@ -9,7 +9,7 @@ const receptes = inject('receptes');
 <template>
     <main class="flex flex-col gap-6">
         <h1 class="text-2xl uppercase text-[#ff8800] font-bold">Recepetes</h1>
-        <ul class="grid grid-cols-3 gap-4">
+        <ul class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             <li class="flex flex-col bg-stone-800 rounded-md overflow-hidden hover:bg-stone-700 hover:scale-[101%] transition-transform" v-for="recepta in receptes" :key="recepta.id">
                 <img :src="recepta.img" alt="img recepta" class="h-[200px] object-cover">
 

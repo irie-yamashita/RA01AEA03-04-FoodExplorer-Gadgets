@@ -6,7 +6,7 @@
 }
 
 section, main {
-    @apply bg-stone-900 text-white max-w-[1500px] py-[30px] mx-auto;
+    @apply bg-stone-900 text-white max-w-[1500px] py-[30px] px-[15px] mx-auto;
 }
 
 .btn {
