@@ -12,10 +12,13 @@
         carret.value.push(producte);
     }
 
+
+
 </script>
 
 <template>
-    <main class="">
+
+    <main>
         <h1 class="text-teal-900 text-3xl uppercase text-center font-bold">Botiga Gadgets</h1>
         <div class="flex items-stretch gap-8">
             <section class="w-[75%]">

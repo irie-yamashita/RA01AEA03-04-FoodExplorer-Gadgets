@@ -100,7 +100,7 @@ const receptes = ref([
 const productes = ref([
   {
     id: 1,
-    nom: 'Iphone 7 (reacondicionat)"',
+    nom: 'Iphone 7 (reacondicionat)',
     preu: 120
   },
   {

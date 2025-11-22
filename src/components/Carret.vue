@@ -22,7 +22,7 @@ const handleBuidarCarret = () => {
    <div class="flex flex-col justify-between gap-4 border-2 border-teal-950 rounded-md p-4 h-full">
     <header class="space-y-2">
         <div class="flex justify-between items-end">
-            <h2 class="text-teal-900 text-2xl font-bold">Carret</h2>
+            <h2 class="text-teal-900 text-2xl font-bold">Carret  <span class="text-sm">({{carret.length}})</span></h2>
             <button @click="handleBuidarCarret" class="cursor-pointer hover:brightness-110 hover:scale-105 transition-transform">
                 <img src="../assets/images/cart-cross.svg" class="text-teal-500 size-7" alt="buidar carret">
             </button>
@@ -31,7 +31,7 @@ const handleBuidarCarret = () => {
              <carret-item v-for="producte in carret" :key="producte.id" :producte="producte"></carret-item>
         </ul>
     </header>
-    <p class="border-t w-full text-end pt-2">Total: {{ costTotal }}€</p>
+    <p class="border-t w-full text-end pt-2">Total: <strong class="text-teal-800">{{ costTotal }}€</strong></p>
 
    </div>
 </template>
